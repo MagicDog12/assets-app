@@ -2,3 +2,4 @@ myvenv/
 __pycache__/
 node_modules/
 *.pdf
+db.sqlite3

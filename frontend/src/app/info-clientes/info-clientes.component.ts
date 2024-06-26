@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class InfoClientesComponent implements OnInit {
 
-  public data: any;
+  public data: Cliente[] = [];
 
   constructor(private apiService: ApiService) { }
 

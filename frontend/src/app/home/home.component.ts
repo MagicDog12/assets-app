@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-monto-total',
+  selector: 'app-home',
   standalone: true,
   imports: [RouterModule],
-  templateUrl: './monto-total.component.html',
-  styleUrl: './monto-total.component.css'
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class MontoTotalComponent {
+export class HomeComponent {
 
 }

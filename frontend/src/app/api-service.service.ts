@@ -18,7 +18,11 @@ export class ApiService {
     return this.http.get(`${this.apiUrl + this.clientes}`);
   }
 
-  getGestores(nombre: string): Observable<any> {
+  getGestores(): Observable<any> {
+    return this.http.get(`${this.apiUrl + this.gestores}`);
+  }
+
+  getGestoresByCliente(nombre: string): Observable<any> {
     return this.http.get(`${this.apiUrl + this.gestores}/?nombre=${nombre}`);
   }
 

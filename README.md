@@ -1,7 +1,18 @@
 # assets-app
 
 ## Instalación:
-dsadsa
+- Instalar dependencias del backend:
+    ```
+    cd backend
+    python -m venv myvenv
+    source myvenv/bin/activate
+    pip install -r requirements.txt
+    ```
+- Instalar dependencias del frontend (necesario version de node>18):
+    ```
+    cd frontend
+    npm install
+    ```
 - Crear superusuario:
     ```
     cd backend
@@ -28,4 +39,10 @@ Primero para correr el backend es necesario ejecutar en una consola:
 ```
 cd backend
 python manage.py runserver
+```
+
+Luego para correr el frontend es necesario ejecutar en la otra consola:
+```
+cd frontend
+npm run start
 ```

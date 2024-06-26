@@ -1,8 +1,29 @@
 <div class="container">
     <div class="box">
-        <div class="btn-group" role="group" aria-label="Basic outlined example">
+        <div class="btn-group mb-2" role="group" aria-label="Basic outlined example">
             <button type="button" class="btn btn-outline-info" routerLink="/">Volver</button>
         </div>
-        <p>info-gestores works!</p>
+        <h3>Gestores:</h3>
+        <p>Información de gestores para cada cliente</p>
+        <div class="btn-group mb-2" role="group" aria-label="Basic outlined example">
+            <button type="button" class="btn btn-outline-primary" *ngFor="let cliente of clientes"
+                (click)="update(cliente.nombre)">{{cliente.nombre}}</button>
+        </div>
+        <div class="container m-2" *ngIf="show">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">{{clienteActual}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let gestor of gestores">
+                        <th scope="row">Gestor</th>
+                        <td>{{gestor.nombre}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

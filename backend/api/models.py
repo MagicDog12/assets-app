@@ -4,7 +4,6 @@ from django.db import models
 
 
 class Cliente(models.Model):
-    id = models.IntegerField(primary_key=True)
     nombre = models.CharField(max_length=10)
 
     def __str__(self):
@@ -12,7 +11,6 @@ class Cliente(models.Model):
 
 
 class Gestor(models.Model):
-    id = models.IntegerField(primary_key=True)
     nombre = models.CharField(max_length=50)
 
     def __str__(self):
@@ -20,7 +18,6 @@ class Gestor(models.Model):
 
 
 class Pago(models.Model):
-    id = models.IntegerField(primary_key=True)
     fecha = models.DateField()
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     monto = models.IntegerField()
@@ -29,4 +26,4 @@ class Pago(models.Model):
     abono = models.IntegerField()
 
     def __str__(self):
-        return f'Pago {self.id} - {self.cliente.nombre}'
+        return f'Pago con rut: {self.rut} y fecha: {self.fecha}'

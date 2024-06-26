@@ -1,4 +1,9 @@
 export interface Pago {
     id: number;
-    nombre: string;
+    abono: number;
+    cliente: number;
+    gestor: number;
+    fecha: string;
+    monto: number;
+    rut: number;
 }

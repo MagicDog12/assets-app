@@ -11,6 +11,9 @@ class ClienteList(generics.ListAPIView):
 class GestoresListByCliente(generics.ListAPIView):
     def get_queryset(self):
         nombre_cliente = self.request.query_params.get('nombre')
+        if not nombre_cliente:
+            gestores = Gestor.objects.all()
+            return gestores
         cliente = Cliente.objects.get(nombre=nombre_cliente)
         pagos_queryset = Pago.objects.filter(cliente=cliente.id)
         pagos = PagoSerializer(pagos_queryset, many=True)

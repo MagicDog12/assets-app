@@ -19,9 +19,8 @@ export class InfoClientesComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getClientes().subscribe({
-      next: (response) => {
+      next: (response: Cliente[]) => {
         this.data = response;
-        console.log(this.data);
       },
       error: (error) => {
         console.error('Error fetching data', error);

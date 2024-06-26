@@ -22,9 +22,8 @@ export class InfoGestoresComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getClientes().subscribe({
-      next: (response) => {
+      next: (response: Cliente[]) => {
         this.clientes = response;
-        console.log(this.clientes);
       },
       error: (error) => {
         console.error('Error fetching data', error);
@@ -37,9 +36,8 @@ export class InfoGestoresComponent implements OnInit {
 
   update(nombre: string) {
     this.apiService.getGestores(nombre).subscribe({
-      next: (response) => {
+      next: (response: Gestor[]) => {
         this.gestores = response;
-        console.log(this.gestores);
       },
       error: (error) => {
         console.error('Error fetching data', error);

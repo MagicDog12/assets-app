@@ -35,7 +35,7 @@ export class InfoGestoresComponent implements OnInit {
   }
 
   update(nombre: string) {
-    this.apiService.getGestores(nombre).subscribe({
+    this.apiService.getGestoresByCliente(nombre).subscribe({
       next: (response: Gestor[]) => {
         this.gestores = response;
       },

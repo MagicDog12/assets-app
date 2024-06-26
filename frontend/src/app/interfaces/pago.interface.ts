@@ -1,4 +1,4 @@
-export interface Cliente {
+export interface Pago {
     id: number;
     nombre: string;
 }

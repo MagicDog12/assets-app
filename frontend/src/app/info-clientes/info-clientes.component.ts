@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ApiService } from '../api-service.service';
 import { CommonModule } from '@angular/common';
+import { Cliente } from '../interfaces/client.interface'
 
 @Component({
   selector: 'app-info-clientes',

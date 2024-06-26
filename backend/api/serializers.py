@@ -5,16 +5,16 @@ from .models import Cliente, Gestor, Pago
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cliente
-        fields = ['nombre']
+        fields = '__all__'
 
 
 class GestorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Gestor
-        fields = ['nombre']
+        fields = '__all__'
 
 
 class PagoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pago
-        fields = ['fecha', 'cliente', 'monto', 'gestor', 'rut', 'abono']
+        fields = '__all__'
